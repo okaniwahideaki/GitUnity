@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{06403365-C6CE-45FC-51A2-810402F6239C}") = "GitClone", "Assembly-CSharp-vs.csproj", "{914FB23D-4C99-E2B1-AB84-64DE6A1C4355}"
 EndProject
+Project("{06403365-C6CE-45FC-51A2-810402F6239C}") = "GitClone", "Assembly-CSharp-Editor-vs.csproj", "{3F4EDB00-1BE8-9801-9985-BC0733600D65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{914FB23D-4C99-E2B1-AB84-64DE6A1C4355}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{914FB23D-4C99-E2B1-AB84-64DE6A1C4355}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{914FB23D-4C99-E2B1-AB84-64DE6A1C4355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4EDB00-1BE8-9801-9985-BC0733600D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4EDB00-1BE8-9801-9985-BC0733600D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4EDB00-1BE8-9801-9985-BC0733600D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4EDB00-1BE8-9801-9985-BC0733600D65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-		GlobalSection(MonoDevelopProperties) = preSolution
+			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
