@@ -42,7 +42,7 @@ public class BatchBuild {
 		PlayerSettings.statusBarHidden = true;
 		string errorMsg_Device = BuildPipeline.BuildPlayer( 
 		                                                   allScene,
-		                                                   "GitUnityiOSDevice",
+		                                                   "iOSDevice",
 		                                                   BuildTarget.iPhone,
 		                                                   opt
 		                                                   );
@@ -61,7 +61,7 @@ public class BatchBuild {
 		PlayerSettings.statusBarHidden = true;
 		string errorMsg_Simulator = BuildPipeline.BuildPlayer( 
 		                                                   allScene,
-		                                                   "GitUnityiOSSimulator",
+		                                                   "iOSSimulator",
 		                                                   BuildTarget.iPhone,
 		                                                   opt
 		                                                   );
