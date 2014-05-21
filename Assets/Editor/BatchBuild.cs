@@ -20,6 +20,57 @@ public class BatchBuild {
 
 	}
 
+	[UnityEditor.MenuItem("Tools/Build Project AllScene iOS")]
+	public static void BuildProjectAllSceneiOS() {
+		EditorUserBuildSettings.SwitchActiveBuildTarget( BuildTarget.iPhone );
+		string[] allScene = new string[EditorBuildSettings.scenes.Length];
+		int i = 0;
+		foreach( EditorBuildSettingsScene scene in EditorBuildSettings.scenes ){
+			allScene[i] = scene.path;
+			i++;
+		}
+		
+		BuildOptions opt = BuildOptions.SymlinkLibraries |
+			BuildOptions.AllowDebugging |
+				BuildOptions.ConnectWithProfiler |
+				BuildOptions.Development;
+
+
+		//BUILD for Device.
+		PlayerSettings.iOS.sdkVersion = iOSSdkVersion.DeviceSDK;
+		PlayerSettings.bundleIdentifier = "com.GitUnityiOS";
+		PlayerSettings.statusBarHidden = true;
+		string errorMsg_Device = BuildPipeline.BuildPlayer( 
+		                                                   allScene,
+		                                                   "GitUnityiOSDevice",
+		                                                   BuildTarget.iPhone,
+		                                                   opt
+		                                                   );
+		
+		if (string.IsNullOrEmpty(errorMsg_Device)){
+			
+		} else {
+			//エラー処理適当に.	
+		}
+		
+		
+		//BUILD for Simulator
+		PlayerSettings.iOS.sdkVersion = iOSSdkVersion.SimulatorSDK;
+		//あとはDeviceビルドと同様に.
+		PlayerSettings.bundleIdentifier = "com.GitUnityiOS";
+		PlayerSettings.statusBarHidden = true;
+		string errorMsg_Simulator = BuildPipeline.BuildPlayer( 
+		                                                   allScene,
+		                                                   "GitUnityiOSSimulator",
+		                                                   BuildTarget.iPhone,
+		                                                   opt
+		                                                   );
+		if (string.IsNullOrEmpty(errorMsg_Simulator)){
+			
+		} else {
+			//エラー処理適当に.	
+		}
+	}
 	
 
 }
