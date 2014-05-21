@@ -5,7 +5,7 @@ using System.Collections;
 public class BatchBuild {
 	// WebPlayer Build.
 	[UnityEditor.MenuItem("Tools/Build Project AllScene")]
-	public static void BuildProjectAllScene() {
+	public static void BuildProjectAllSceneWebPlayer() {
 		EditorUserBuildSettings.SwitchActiveBuildTarget (BuildTarget.WebPlayer);
 		string[] allScene = new string[EditorBuildSettings.scenes.Length];
 		int i = 0;
@@ -19,5 +19,7 @@ public class BatchBuild {
 		                          BuildOptions.None);
 
 	}
+
+	
 
 }
